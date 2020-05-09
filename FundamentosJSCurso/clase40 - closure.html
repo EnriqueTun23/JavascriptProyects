@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Clase 40 - Closures</title>
+</head>
+
+<body>
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <script>
+    function crearSaludo(finalDeFrase) {
+      return function (nombre)  {
+        console.log(`Hola ${nombre} ${finalDeFrase}` )
+      }
+    }
+
+    const saludoArgentino = crearSaludo('che');
+    const saludoMexicano = crearSaludo('guey');
+    const saludoColombiano = crearSaludo('cuatito');
+
+    saludoArgentino('kike');
+    saludoMexicano('kike');
+    saludoColombiano('kike');
+
+  </script>
+  <!-- <script src="clase37.js"></script> -->
+</body>
+
+</html>
